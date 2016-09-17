@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  
+<!-- Styling -->  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="animate.css">
+  
+  <title>MTG Planes</title>
+
+</head>
+  <body>
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+  <script src="router.js"></script>
+  <script src="app.js"></script>
+  <script src="dice.js"></script>
+  
+    <md-toolbar style="background-color: #90838B" class="banner md-tall md-accent">
+      <h2 class="md-toolbar-tools">
+        <span class="animated bounceInRight title">MTG Planes<img class="manaImg" src="http://humpheh.com/magic/c/symbols_new.png"></span>
+      </h2>
+    </md-toolbar>
+    
+    <md-content>
+      <div layout="row" layout-align="center center">
+        <div layout-fill>
+            <md-card class="cardBackground">
+              <md-card-content>
+                <div class="planeCtrl" ng-controller="planesCtrl" ng-cloak> 
+ 
+                
+                  <img class="planeImg" ng-init="index = 0" ng-src="{{data[index].location}}" style="height:500px;width:650px"/>
+                  
+                    <div class="navButtons">
+                    <md-button class="md-primary md-raised" ng-click = "index = (index - 1)">PREVIOUS</md-button>
+                    <md-button class="md-primary md-raised" ng-click = getAll()>SHUFFLE</md-button>
+                    <md-button class="md-primary md-raised" ng-click = "index = (index + 1)">NEXT</md-button>
+                    </div>
+                </div>
+                    
+                    <div class="diceRoll" ng-controller="diceRoll" ng-cloak >
+                     <div class="rollCount">Rolls: {{display.count}}</div>
+                      <img class="diceImg" ng-src="{{display.symbol}}" style="height:70px;width:50px"/>
+                      <md-button class="md-raised" ng-click = rollDice()>ROLL!</md-button>
+                    </div>
+              </md-card-content>
+              <span class="legal"> Images are ™ & © Copyright 2016 Wizards of the Coast LLC</span>
+            </md-card>
+          </div>
+        </div>
+      </md-content>
+  </body>
+</html>
+
+
+
+<!-- 
+    <md-toolbar class="md-tall md-accent">
+      <h2 class="md-toolbar-tools">
+        <span class="title">MTG Planes</span>
+      </h2>
+    </md-toolbar>
+      <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-content>
+  <div ng-controller="diceRoll" ng-cloak>
+    <img ng-src="{{display.symbol}}" style="height:70px;width:50px"/>
+    <md-button ng-click = rollDice()>ROLL!</md-button>
+  </div>
+  
+  <div layout="column" layout-align="center center">
+  <div class="planeImg" ng-controller="planesCtrl" ng-cloak> 
+    <img ng-init="index = 0" ng-src="{{data[index].location}}" style="height:500px;width:650px"/>
+    <div layout="row" layout-align="center">
+    <md-content>
+    <md-button class="md-primary md-raised btn1" ng-click = "index = (index - 1)">PREVIOUS</md-button>
+    <md-button class="md-raised" ng-click = getAll()>SHUFFLE</md-button>
+    <button ng-click = "index = (index + 1)">NEXT</button>
+    </div>
+    </md-content>
+  </div>
+  </div>
+  </md-card-content>
+        
+
+        
+      </md-card> -->
