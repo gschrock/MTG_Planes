@@ -1,15 +1,6 @@
 var app = angular.module('app', ['ngMaterial']);
 
 app.controller('planesCtrl', function($scope, $http, GetPlanes){
-  //$scope.plane ="http://magiccards.info/extras/plane/planechase-2012-edition/akoum.jpg";
-
-
-
-  // $http.get('/data/planes.json').success(function (data) {
-  //   $rootScope.data = data;
-  //   console.log($scope.data);
-  // });
-  // $scope.getImg = GetMana.getImg;
   
   $scope.getAll = function() {
     GetPlanes.getAll()
@@ -52,22 +43,3 @@ app.factory('GetPlanes', function ($http) {
     getAll: getAll
   };
 });
-
-// app.factory('Shuffle', function(){
-//   var shuffle = function(data){
-    
-//   }
-//   return {
-//     shuffle: shuffle
-//   };
-// })
-
-
-
-// app.config(function ($routeProvider, $httpProvider) {
-//   $routeProvider
-//     .when('/signin', {
-//       templateUrl: 'app/auth/signin.html',
-//       controller: 'AuthController'
-//     })
-// })

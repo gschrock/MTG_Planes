@@ -18,20 +18,12 @@
 }
 
 .dice {
-/*  margin-top: 200px;*/
   background-color: grey;
 }
-
-/*.planeImg {
-  margin-left: 300px;
-}*/
 
 .navButtons {
   margin-left: 170px;
 }
-/*.btn1 {
- background-color: purple;
-}*/
 
 .planeCtrl {
   display: inline-block;

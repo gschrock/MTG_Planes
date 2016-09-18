@@ -10,4 +10,4 @@ angular.module('router', [
       templateUrl: 'index.html',
       controller: 'planesCtrl'
     })
-})
+});

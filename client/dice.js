@@ -32,4 +32,4 @@ app.factory("Roll", function(){
     count: 0
   }
   return result;
-})
+});
