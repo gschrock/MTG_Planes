@@ -22,39 +22,91 @@
   <script src="app.js"></script>
   <script src="dice.js"></script>
   
-    <md-toolbar style="background-color: #90838B" class="banner md-tall md-accent">
-      <h2 class="md-toolbar-tools">
+<!--     <md-toolbar style="background-color: #90838B" class="banner md-tall md-accent">
+      <h2 class="md-toolbar-tools"> -->
+      <div class="titleContainer">
         <span class="animated bounceInRight title">MTG Planes<img class="manaImg" src="http://humpheh.com/magic/c/symbols_new.png"></span>
-      </h2>
-    </md-toolbar>
+      </div>
+      <!-- </h2> -->
+<!--     </md-toolbar> -->
     
-    <md-content>
+<!--     <md-content> -->
       <div layout="row" layout-align="center center">
-        <div layout-fill>
-            <md-card class="cardBackground">
-              <md-card-content>
+        <div layout-fill class="cardBackground">
+<!--             <md-card> -->
+              <div class="cardBackground">
                 <div class="planeCtrl" ng-controller="planesCtrl" ng-cloak> 
  
-                
-                  <img class="planeImg" ng-init="index = 0" ng-src="{{data[index].location}}" style="height:500px;width:650px"/>
+                  <div layout="row">
+                    <div flex>
+                      <div layout="column">
+                        <div flex>
+                          <img class="planeImg" ng-init="indexP = 0" ng-src="{{planes[indexP].location}}" style="height:500px;width:650px"/>
+                        </div>
+                        <div flex class="planeBtns">
+                          <md-button class="md-primary md-raised" ng-click = "indexP = (indexP - 1)">PREVIOUS</md-button>
+                          <md-button class="md-primary md-raised" ng-click = getPlanes()>SHUFFLE</md-button>
+                          <md-button class="md-primary md-raised" ng-click = "indexP = (indexP + 1)">NEXT</md-button>
+                          
+                          <div flex class="diceRoll" ng-controller="diceRoll" ng-cloak >
+                            <img class="diceImg" ng-src="{{display.symbol}}" style="height:50px;width:30px"/>
+                            <div class="rollParent">
+                            <md-button class="md-raised rollBtn" ng-click = rollDice()>ROLL!</md-button>
+                            <div class="rollCount">Rolls: {{display.count}}</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                                               
+                      </div>
+                    </div>
+                    <div flex>
+                      <div layout="column" class="schemeContainer">
+                        <div flex>
+                          <img class="schemeImg" ng-init="indexS = 0" ng-src="{{schemes[indexS].location}}" style="height:500px;"/>
+                        </div>
+                        <div flex class="schemeBtns">
+                          <md-button class="md-primary md-raised" ng-click = "indexS = (indexS - 1)">PREVIOUS</md-button>
+                          <md-button class="md-primary md-raised" ng-click = getSchemes()>SHUFFLE</md-button>
+                          <md-button class="md-primary md-raised" ng-click = "indexS = (indexS + 1)">NEXT</md-button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+<!--                   <img class="planeImg" ng-init="indexP = 0" ng-src="{{planes[indexP].location}}" style="height:500px;width:650px"/>
+                  
+                  <img class="schemeImg" ng-init="indexS = 0" ng-src="{{schemes[indexS].location}}" style="height:500px;"/>
                   
                     <div class="navButtons">
-                    <md-button class="md-primary md-raised" ng-click = "index = (index - 1)">PREVIOUS</md-button>
-                    <md-button class="md-primary md-raised" ng-click = getAll()>SHUFFLE</md-button>
-                    <md-button class="md-primary md-raised" ng-click = "index = (index + 1)">NEXT</md-button>
-                    </div>
-                </div>
+                      <md-button class="md-primary md-raised" ng-click = "indexP = (indexP - 1)">PREVIOUS</md-button>
+                      <md-button class="md-primary md-raised" ng-click = getPlanes()>SHUFFLE</md-button>
+                      <md-button class="md-primary md-raised" ng-click = "indexP = (indexP + 1)">NEXT</md-button>
+                      
+                      <md-button class="md-primary md-raised" ng-click = "indexS = (indexS - 1)">PREVIOUS</md-button>
+                      <md-button class="md-primary md-raised" ng-click = getSchemes()>SHUFFLE</md-button>
+                      <md-button class="md-primary md-raised" ng-click = "indexS = (indexS + 1)">NEXT</md-button>                   
+                    </div> -->
+                
+                  <!-- <img class="schemeImg" ng-init="indexS = 0" ng-src="{{schemes[indexS].location}}" style="height:500px;width:650px"/> -->
+                  
+<!--                     <div class="navButtons">
+                    <md-button class="md-primary md-raised" ng-click = "indexS = (indexS - 1)">PREVIOUS</md-button>
+                    <md-button class="md-primary md-raised" ng-click = getSchemes()>SHUFFLE</md-button>
+                    <md-button class="md-primary md-raised" ng-click = "indexS = (indexS + 1)">NEXT</md-button>
+                    </div> -->
+                  </div>
                     
-                    <div class="diceRoll" ng-controller="diceRoll" ng-cloak >
+<!--                     <div class="diceRoll" ng-controller="diceRoll" ng-cloak >
                      <div class="rollCount">Rolls: {{display.count}}</div>
                       <img class="diceImg" ng-src="{{display.symbol}}" style="height:70px;width:50px"/>
                       <md-button class="md-raised" ng-click = rollDice()>ROLL!</md-button>
-                    </div>
-              </md-card-content>
-              <span class="legal"> Images are ™ & © Copyright 2016 Wizards of the Coast LLC</span>
-            </md-card>
+                    </div> -->
+              </div>
+<!--             </md-card> -->
           </div>
+            <span class="legal"> Images are ™ & © Copyright 2016 Wizards of the Coast LLC</span>
         </div>
-      </md-content>
+<!--       </md-content> -->
   </body>
 </html>
