@@ -478,5 +478,41 @@
     "type":"Plane",
     "plane":"Kinshala",
     "location":"http://magiccards.info/extras/plane/planechase/tember-city.jpg"
+  },
+  {
+    "name":"Chaotic Aether",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/chaotic-aether.jpg"
+  },
+  {
+    "name":"Morphic Tide",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/morphic-tide.jpg"
+  },
+  {
+    "name":"Mutual Epiphany",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/mutual-epiphany.jpg"
+  },
+  {
+    "name":"Planewide Disaster",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/planewide-disaster.jpg"
+  },
+  {
+    "name":"Reality Shaping",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/reality-shaping.jpg"
+  },
+  {
+    "name":"Time Distortion",
+    "type":"Phenomenon",
+    "plane":"N/A",
+    "location":"http://magiccards.info/extras/phenomenon/planechase-2012-edition/time-distortion.jpg"
   }
 ]
